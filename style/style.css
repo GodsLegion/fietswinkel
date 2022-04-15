@@ -1,0 +1,51 @@
+body {
+    margin: 0 0;
+}
+
+.container {
+    height: auto;
+    width: 100%;
+    margin: 0;
+    background-color: grey;
+}
+
+header {
+    display: flex;
+    height: 150px;
+    width: 100%;
+    background-color: orange;
+    margin: 0 0;
+    flex-direction: row;
+}
+#header {
+    display: flex;
+    width: 75%;
+    height: 200px;
+    justify-content: space-around;
+}
+#logo {
+    width: 350px;
+    height: 150px;
+}
+#logo-link {
+    width: 350px;
+    margin: 0;
+}
+
+button {
+    height: 80px;
+    width: 120px;
+    border-radius: 70px;
+    background-color: white;
+    margin: 0;
+}
+
+.centerheader {
+    margin-top: 50px;
+}
+
+footer {
+    height: 150px;
+    width: 100%;
+    background-color: orange;
+}
