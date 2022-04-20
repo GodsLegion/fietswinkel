@@ -26,14 +26,18 @@
                 <h1>Bicycleshop</h1>
                 <p>alles voor uw fiets</p>
             </div>
+         <div class="headrow">
+             <a href="herenfiets.php"><button type="button" class="head">Herenfietsen</button></a>
+             <a href="damesfiets.php"><button type="button" class="head">damesfietsen</button></a>
+             <a href="kinderfiets.php"><button type="button" class="head">kinderfietsen</button></a>
 
-            <button type="button" class="btn btn-secondary"><a href="herenfiets.php">Herenfietsen</button>
-            <button type="button" class="btn btn-secondary"><a href="damesfiets.php">damesfietsen</button>
-            <button type="button" class="btn btn-secondary"><a href="kinderfiets.php">kinderfietsen</button>
-             <button type="button" class="btn btn-secondary"><a href="winkelwagen.php">Winkelwagen</a></button>
 
-            <button type="button" class="btn btn-secondary"><a href="inlog.php">Inloggen</a></button>
-            <button type="button" class="btn btn-secondary"><a href="aanmeld.php">account aanmaken</a></button>
+         </div>
+         <div class="headrow">
+             <a href="winkelwagen.php"><button type="button" class="head">Winkelwagen</button></a>
+             <a href="inlog.php"><button type="button" class="head">Inloggen</button></a>
+             <a href="aanmeld.php"><button type="button" class="head">account aanmaken</button></a>
+         </div>
         </div>
         
-    </header> 
+    </header>

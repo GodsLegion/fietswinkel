@@ -87,7 +87,7 @@ header
         th {
             border: 1px solid black;
             height: 10px;
-            background-color: orange
+            background-color: orange;
         }
         td{
             border: 1px solid black;
@@ -104,6 +104,35 @@ header
             border-radius: 70px;
             background-color: white;
             margin: 0;
+            background-color: #f57404;
+            font-weight: bold;
+        }
+        .head
+        {
+            background-color: #f57404;
+            height: 100px;
+            width: 100px;
+            border-radius: 0;
+            margin: 10px;
+
+        }
+        .headfoot
+        {
+            background-color: #f57404;
+            height: 50px;
+            width: 170px;
+            border-radius: 0;
+            margin: 10px;
+
+        }
+        .head:hover
+        {
+            color: yellow;
+        }
+        .headrow
+        {
+            display: flex;
+            flex-direction: row;
         }
         button:hover{
             background-color: black;

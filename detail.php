@@ -29,7 +29,7 @@ $id = $_GET['id'];
             <h2>€<?php echo$row['prijs']; ?>,00</h2>
             <form action="" method="post">
 
-                <button></button>
+                <button>In winkelwagen</button>
             </form>
 
             <br>
@@ -62,7 +62,6 @@ $id = $_GET['id'];
                     <td><?php echo$row['elektrisch']; ?></td>
                 </tr>
             </table>
-
         <?php } ?>
 
 </div>

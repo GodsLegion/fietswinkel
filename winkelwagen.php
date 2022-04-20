@@ -11,41 +11,51 @@
         </div>
     <?php endif?>
 
-    <!--database verbinding met de querry-->
     <?php $results = db_connect()->query("SELECT * FROM fietsen WHERE type='heren'"); ?>
-
-
-<!--    <div class="fiets">-->
-<!--        --><?php //while($row = $results->fetch_assoc()) { ?>
-<!--            <div>-->
-<!--                <a href="detail.php?id=--><?php //echo$row['ID']; ?><!--">-->
-<!--                    <img src="--><?php //echo$row['afbeelding']; ?><!--" height="200" width="200">-->
-<!--                    <h2>--><?php //echo$row['titel']; ?><!--</h2>-->
-<!--                    <h2>€--><?php //echo$row['prijs']; ?><!--</h2>-->
-<!--                </a>-->
-<!--            </div>-->
-<!--            <div style="width: 20px"></div>-->
-<!--        --><?php //} ?>
-<!--    </div>-->
-
-
+    <?php
+    $klantid = 1;
+    $productid = [];
+    $aantalp = [];
+    $prijs = [];
+    $aantal = 1;
+    ?>
     <table>
+        <tr>
+            <th colspan="2">Product</th>
+            <th>Aantal</th>
+            <th>prijs</th>
+        </tr>
     <?php while($row = $results->fetch_assoc()) { ?>
         <tr>
-            <td rowspan="2"><img src="<?php echo$row['afbeelding']; ?>" height="100px" width="100px"></td>
-            <td><?php echo$row['titel']; ?></td>
+            <a href="detail.php?id=<?php echo$row['ID']; ?>"><td><img src="<?php echo$row['afbeelding']; ?>" height="100px" width="100px"></td></a>
+            <td><?php echo$row['titel']; ?>, <?php echo$row['versnellingen']; ?> versnellingen, <?php echo$row['elektrisch']; ?> elektrisch, <?php echo$row['kleur']; ?></td>
+            <td><?php echo $aantal?></td>
             <td>€<?php echo$row['prijs']; ?></td>
-            <td><?php echo$row['elektrisch']; ?></td>
-            <td><?php echo$row['kleur']; ?></td>
-            <td><?php echo$row['versnellingen']; ?></td>
+            <?php
+                array_push($productid, $row['ID']);
+                array_push($aantalp, $aantal);
+                array_push($prijs, $row['prijs']);
+            ?>
         </tr>
-        <tr>
-            <td><?php echo$row['merk']; ?></td>
-            <td><?php echo$row['model']; ?></td>
-        </tr>
-
     <?php } ?>
+        <tr>
+            <th colspan="2"></th>
+            <th>Totaal</th>
+            <td>€<?php echo array_sum($prijs) ?></td>
+        </tr>
     </table>
+    <?php
+    function bestel($array, $klant, $hoeveelheid)
+    {
+        $nummer = 0;
+        foreach ($array as $product)
+        {
+            $insert = db_connect()->query("INSERT INTO bestellingen(klantid, producktid, aantal, afgeleverd) VALUES ('$product[$nummer]','$klant',$hoeveelheid[$nummer],false)");
+            $nummer++;
+        }
 
+    }
+    ?>
+    <button onclick="<?php bestel($productid, klantid, $aantalp); ?>">Betaal</button>
 </div>
 <?php include 'includes/footer.php'; ?>
