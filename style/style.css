@@ -98,6 +98,16 @@ header
         .koopmenu:hover{
             background-color: black;
         }
+        .winkelwagen
+        {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .mandje
+        {
+            margin: 0;
+        }
         button{
             height: 40px;
             width: 100px;
