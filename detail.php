@@ -6,7 +6,6 @@ $id = $_GET['id'];
 ?>
 
 
-<body>
 <div class="container">
 
 
@@ -28,6 +27,11 @@ $id = $_GET['id'];
             <img src="<?php echo$row['afbeelding']; ?>" style="width: 500px; height: 400px;">
             <h2><?php echo$row['titel']; ?></h2>
             <h2>€<?php echo$row['prijs']; ?>,00</h2>
+            <form action="" method="post">
+
+                <button></button>
+            </form>
+
             <br>
             <br>
             <h2>Beschrijving</h2>
@@ -62,7 +66,7 @@ $id = $_GET['id'];
         <?php } ?>
 
 </div>
-</body>
+
 
 
 <?php include 'includes/footer.php'; ?>

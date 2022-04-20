@@ -30,6 +30,7 @@
             <button type="button" class="btn btn-secondary"><a href="herenfiets.php">Herenfietsen</button>
             <button type="button" class="btn btn-secondary"><a href="damesfiets.php">damesfietsen</button>
             <button type="button" class="btn btn-secondary"><a href="kinderfiets.php">kinderfietsen</button>
+             <button type="button" class="btn btn-secondary"><a href="winkelwagen.php">Winkelwagen</a></button>
 
             <button type="button" class="btn btn-secondary"><a href="inlog.php">Inloggen</a></button>
             <button type="button" class="btn btn-secondary"><a href="aanmeld.php">account aanmaken</a></button>
