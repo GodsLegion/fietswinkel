@@ -44,7 +44,7 @@
             <td>€<?php echo array_sum($prijs) ?></td>
         </tr>
     </table>
-    <button onclick="">Betaal</button>
+    <button onclick="bestel(<?php echo $productid . "," . $klantid . "," . $aantalp?>)">Betaal</button>
 
     <?php
     function bestel($array, $klant, $hoeveelheid)
