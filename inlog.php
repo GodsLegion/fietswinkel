@@ -14,7 +14,7 @@
 </br>
 </br>
 </br>
-<button type="button" class="btn btn-secondary"><a href="inlogbeheerder.php">admin inlog</button>
+<button type="button" class="btn btn-secondary"><a href="inlogbeheerder.php">admin inlog</a></button>
 
     </div>
 </body>
