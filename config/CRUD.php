@@ -24,21 +24,21 @@
         // maakt nieuwe persoon aan CREATE
         if(isset($_POST['save'])) {
 
-            $prijs = $n['prijs'];             //aanpassen nieuwe database 
-                $titel = $n['titel'];       //aanpassen nieuwe database
-                $beschrijving = $n['beschrijving']; 
-                $type = $n['type']; 
-                $afbeelding = $n['afbeelding']; 
-                $merk = $n['merk']; 
-                $model = $n['model']; 
-                $kleur = $n['kleur']; 
-                $versnellingen = $n['versnellingen']; 
-                $elektrisch = $n['elektrisch']; 
+            $prijs = $_POST['prijs'];             //aanpassen nieuwe database 
+                $titel = $_POST['titel'];       //aanpassen nieuwe database
+                $beschrijving = $_POST['beschrijving']; 
+                $type = $_POST['type']; 
+                $afbeelding = $_POST['afbeelding']; 
+                $merk = $_POST['merk']; 
+                $model = $_POST['model']; 
+                $kleur = $_POST['kleur']; 
+                $versnellingen = $_POST['versnellingen']; 
+                $elektrisch = $_POST['elektrisch']; 
 
-            $db->query("INSERT INTO fietsen (prijs, titel, beschrijving, type, afbeelding, merk, model,kleur, versnellingen) VALUES ('$prijs', '$titel', '$beschrijving', '$type', '$afbeelding', '$merk', '$model', '$kleur', '$versnellingen', '$elektriesch')");
+            $db->query("INSERT INTO fietsen (prijs, titel, beschrijving, type, afbeelding, merk, model, kleur, versnellingen, elektrisch) VALUES ('$prijs', '$titel', '$beschrijving', '$type', '$afbeelding', '$merk', '$model', '$kleur', '$versnellingen', '$elektrisch')");
 
             $_SESSION['message']="Address saved";
-            header('location: accountBeheerder.php');
+            header('location: ../accountBeheerder.php');
         }
         
  
