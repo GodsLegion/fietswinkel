@@ -25,7 +25,7 @@
     <div class="container">
 <h1>beheerder ingelogged</h1>
 <?php
-session_start();
+//session_start();
 
 // checkt of je ingelogd bent zo nee ga je naar de inlog pagina
 if(!isset($_SESSION['gebruiker'])){
@@ -35,7 +35,7 @@ if(!isset($_SESSION['gebruiker'])){
 
 
 //als je bent ingeloged zie je dit
-echo "Welkom " . $_SESSION['klanten']['voornaam'] . " " . $_SESSION['klanten']['achternaam'] . "!";
+//echo "Welkom " . $_SESSION['klanten']['voornaam'] . " " . $_SESSION['klanten']['achternaam'] . "!";
 ?>
 
 
@@ -86,16 +86,16 @@ echo "Welkom " . $_SESSION['klanten']['voornaam'] . " " . $_SESSION['klanten']['
                         <td><?php echo$row['model']; ?></td>
                         <td><?php echo$row['kleur']; ?></td>
                         <td><?php echo$row['versnellingen']; ?></td>
-                        <td><?php echo$row['elekstrisch']; ?></td>
+                        <td><?php echo$row['elektrisch']; ?></td>
                         
                         <!-- edit knop-->
                         <td>
-                            <a href="index.php?edit=<?php echo $row['ID']; ?>" class="edit_btn" >Edit</a>  
+                            <a href="accountBeheerder.php?edit=<?php echo $row['ID']; ?>" class="edit_btn" >Edit</a>  
                         </td>
                         
                         <!-- delete knop-->
                         <td>
-                            <a href="server.php?del=<?php echo $row['ID']; ?>" class="del_btn">Delete</a>
+                            <a href="config/CRUD.php?del=<?php echo $row['ID']; ?>" class="del_btn">Delete</a>
                         </td>
                     
                     </tr>

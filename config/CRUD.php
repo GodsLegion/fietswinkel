@@ -6,7 +6,6 @@
     $db = new mysqli('localhost','root','','dderksen_fietswinkel');
     
     // maakt lege variablen aan
-    $n = $record->fetch_array();
     $prijs = "";             //aanpassen nieuwe database 
     $titel = "";       //aanpassen nieuwe database
     $beschrijving = ""; 
@@ -46,23 +45,23 @@
         // haalt uit de database en je kunt het aanpassen UPDATE
         if (isset($_POST['update'])){
 
-            $id = $_POST['ID'];             //aanpassen nieuwe database
-            $prijs = $n['prijs'];             //aanpassen nieuwe database 
-            $titel = $n['titel'];       //aanpassen nieuwe database
-            $beschrijving = $n['beschrijving']; 
-            $type = $n['type']; 
-            $afbeelding = $n['afbeelding']; 
-            $merk = $n['merk']; 
-            $model = $n['model']; 
-            $kleur = $n['kleur']; 
-            $versnellingen = $n['versnellingen']; 
-            $elektrisch = $n['elektrisch']; 
+            $id = $_POST['id'];             //aanpassen nieuwe database
+            $prijs = $_POST['prijs'];             //aanpassen nieuwe database 
+            $titel = $_POST['titel'];       //aanpassen nieuwe database
+            $beschrijving = $_POST['beschrijving']; 
+            $type = $_POST['type']; 
+            $afbeelding = $_POST['afbeelding']; 
+            $merk = $_POST['merk']; 
+            $model = $_POST['model']; 
+            $kleur = $_POST['kleur']; 
+            $versnellingen = $_POST['versnellingen']; 
+            $elektrisch = $_POST['elektrisch']; 
 
-            $db->query("UPDATE fietsen SET  prijs='$prijs', titel'$titel', beschrijving='$beschrijving', type='$type', afbeelding='$afbeelding', merk='$merk', model='$model', kleur='$kleur', versnellingen='$versnellingen', elektriesch='$elektriesch' WHERE ID=$id");
+            $db->query("UPDATE fietsen SET  prijs='$prijs', titel='$titel', beschrijving='$beschrijving', type='$type', afbeelding='$afbeelding', merk='$merk', model='$model', kleur='$kleur', versnellingen='$versnellingen', elektrisch='$elektrisch' WHERE ID=$id");
 
 
             $_SESSION['message'] = "updated!";
-            header('location: accountBeheerder.php');
+            header('location: ../accountBeheerder.php');
         }
 
         // verwijdert uit de database DELETE
@@ -73,5 +72,5 @@
             $db->query("DELETE FROM fietsen WHERE ID=$id");
 
             $_SESSION['message'] = "deleted!";
-            header('location: accountBeheerder.php');
+            header('location: ../accountBeheerder.php');
         }
