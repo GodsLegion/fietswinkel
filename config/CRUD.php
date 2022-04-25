@@ -3,7 +3,7 @@
     session_start();
 
     // maakt verbinding met database en stopt het in de variable "db" locatie, inlog naam, wachtwoord, database naam
-    $db = new mysqli('localhost','root','','crud');
+    $db = new mysqli('localhost','root','','dderksen_fietswinkel');
     
     // maakt lege variablen aan
     $n = $record->fetch_array();
